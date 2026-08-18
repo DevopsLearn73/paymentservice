@@ -2,14 +2,14 @@ pipeline {
     agent any
 
     environment {
-        IMAGE_NAME = "manojkrishnappa/paymentservice:${GIT_COMMIT}"
+        IMAGE_NAME = "rohitkube/paymentservice:${GIT_COMMIT}"
     }
 
     stages {
 
         stage('Git Checkout') {
             steps {
-                git url: 'https://github.com/ITkannadigaru/paymentservice.git', branch: 'main'
+                git url: 'https://github.com/DevopsLearn73/paymentservice.git', branch: 'main'
             }
         }
 
